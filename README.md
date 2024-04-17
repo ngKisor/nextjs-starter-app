@@ -13,8 +13,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ---
 
-Built With:
-- [TypeScript](https://www.typescriptlang.org/)
+Features
+- [TypeScript](https://www.typescriptlang.org/) with React
 - [Tailwind css](https://www.postgresql.org/) CSS framework.
 - [Shad cn](https://ui.shadcn.com/) as UI component.
 - [ESLint](http://eslint.org/) code linting.
@@ -22,11 +22,11 @@ Built With:
 - [Fullstory](https://www.fullstory.com/) behavior tracking.
 - [Mixpanel](https://mixpanel.com/) product analytics tracking.
 
-## Setup
+## Getting Started
 
-Clone the repository, install the dependencies and get started right away.
+The best way to start with this template is using create-next-app.
 
-    $ git clone --depth=1 git@github.com:ngKisor/nestjs-starter.git <application-name>
+    $ npx create-next-app <application-name> -e https://github.com/ngKisor/nextjs-starter-app
     $ cd <application-name>
     $ rm -rf .git
     $ pnpm install
@@ -38,7 +38,7 @@ Make a copy of `.env.example` as `.env` and update your Auth0 credentials
 ```bash
 $ pnpm run dev
 ```
-Navigate to http://localhost:3000/ to view UI
+Navigate to http://localhost:3000/ to see Auth ready application
 
 ## Building the app
 
@@ -53,8 +53,7 @@ For contribution and feature requests, please create an [issue](https://github.c
 
 ## License
 
-NestJs-Api-Starter is under [MIT License](LICENSE).
-
+Nextjs-Starter-App is under [MIT License](LICENSE).
 
 ## Why Use Auth0?
 
