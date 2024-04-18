@@ -1,5 +1,3 @@
-
-
 <h2 align="center">
   Nextjs starter app
 </h2>
@@ -7,6 +5,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). using App Router
 
 ## Prerequisites
+
 - [Node.js](https://nodejs.org/en/download)
 - [PNPM](https://pnpm.io/installation)
 - [NPM](https://docs.npmjs.com/getting-started/installing-node)
@@ -14,6 +13,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ---
 
 Features
+
 - [TypeScript](https://www.typescriptlang.org/) with React
 - [Tailwind css](https://www.postgresql.org/) CSS framework.
 - [Shad cn](https://ui.shadcn.com/) as UI component.
@@ -38,6 +38,7 @@ Make a copy of `.env.example` as `.env` and update your Auth0 credentials
 ```bash
 $ pnpm run dev
 ```
+
 Navigate to http://localhost:3000/ to see Auth ready application
 
 ## Building the app

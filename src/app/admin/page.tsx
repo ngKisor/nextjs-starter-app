@@ -1,18 +1,20 @@
-
-
-import { NextPage } from "next";
-import React from "react";
-import { withPageAuthRequired } from "@auth0/nextjs-auth0";
+import mixpanelService from '@/services/mixpanel.service';
+import { NextPage } from 'next';
+import React, { useEffect } from 'react';
 
 const Profile: NextPage = async () => {
-
-    return (
-        <div className="content-layout">
-            <h1 id="page-title" className="content__title">
-                Admin Dashboard
-            </h1>
-        </div>
-    );
-}
+  useEffect(() => {
+    mixpanelService.track('Navigation', {
+      Page: 'Admin Dashboard',
+    });
+  }, []);
+  return (
+    <div className="content-layout">
+      <h1 id="page-title" className="content__title">
+        Admin Dashboard
+      </h1>
+    </div>
+  );
+};
 
 export default Profile;

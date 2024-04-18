@@ -1,4 +1,4 @@
-import { AppError } from "./app-error";
+import { AppError } from './app-error';
 
 export interface ApiResponse<T> {
   data: T | null;

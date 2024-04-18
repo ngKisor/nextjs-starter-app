@@ -1,8 +1,8 @@
-import "server-only";
+import 'server-only';
 
-import { UserProfile } from "@/types/user-profile";
+import { UserProfile } from '@/types/user-profile';
 //Get Server-Side User Profile Information in Next.js
-import { Claims, getSession } from "@auth0/nextjs-auth0";
+import { Claims, getSession } from '@auth0/nextjs-auth0';
 
 export const getUserProfileData = async (): Promise<Claims> => {
   const session = await getSession();
