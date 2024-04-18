@@ -38,10 +38,11 @@ const reset = () => {
   if (debugMode) console.info('[MIXPANEL] reset');
 };
 
-export default {
+const eventNames = {
   initializeMixpanel,
   identify,
   track,
   cohort,
   reset,
 };
+export default eventNames;
