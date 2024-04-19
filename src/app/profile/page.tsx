@@ -1,6 +1,8 @@
+'use client';
+
 import { NextPage } from 'next';
 import React, { useEffect } from 'react';
-import { getUserProfileData } from '@/services/profile.service';
+import { getUserProfileData } from '@/services/user.service';
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 import mixpanelService from '@/services/mixpanel.service';
 

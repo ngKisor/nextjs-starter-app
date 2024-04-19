@@ -9,7 +9,8 @@
     "lint": "next lint",
     "format": "prettier --check --ignore-path .gitignore .",
     "format:fix": "prettier --write --ignore-path .gitignore .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "lighthouse": "next build && next start & lighthouse http://localhost:3000 --view"
   },
   "dependencies": {
     "@auth0/nextjs-auth0": "^3.5.0",
@@ -27,6 +28,7 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@types/mixpanel-browser": "^2.49.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

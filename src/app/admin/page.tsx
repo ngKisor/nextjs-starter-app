@@ -1,3 +1,4 @@
+'use client';
 import mixpanelService from '@/services/mixpanel.service';
 import { NextPage } from 'next';
 import React, { useEffect } from 'react';

@@ -8,13 +8,15 @@ import {
   CardContent,
 } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
+import { NextPage } from 'next';
 
 type CardProps = React.ComponentProps<typeof Card>;
 
-export default function Home({ className, ...props }: CardProps) {
+const Home: NextPage = (props: CardProps) => {
+  const { className } = props;
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Card className={cn('w-[600px]', 'className')} {...props}>
+      <Card className={cn('w-[600px]', 'className')}>
         <CardHeader>
           <CardTitle>Powered By Shad cn</CardTitle>
           <CardDescription>
@@ -34,9 +36,15 @@ export default function Home({ className, ...props }: CardProps) {
           </div>
         </CardContent>
         <CardFooter>
-          <Button className="w-full">Follow README for further</Button>
+          <Button className="w-full">
+            Follow{' '}
+            <a href="https://github.com/ngKisor/nextjs-starter-app">README</a>{' '}
+            for further
+          </Button>
         </CardFooter>
       </Card>
     </main>
   );
-}
+};
+
+export default Home;

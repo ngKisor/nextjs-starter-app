@@ -1,7 +1,8 @@
+'use client';
 import mixpanel from 'mixpanel-browser';
 
 const enabled = JSON.parse(process.env.MIXPANEL_ENABLED || 'true');
-const debugMode = localStorage.getItem('mixpanelDebug') === 'true';
+const debugMode = typeof window !== 'undefined' && localStorage.getItem('key');
 const mixpanelToken = process.env.MIXPANEL_TOKEN;
 
 const initializeMixpanel = () => {

@@ -1,13 +1,22 @@
 'use client';
 
-import React, { PropsWithChildren } from 'react';
-
-// import { useUser } from "@auth0/nextjs-auth0/client";
+import React, { PropsWithChildren, useEffect } from 'react';
 import Navbar from './navbar';
-import Loading from './loading';
+// import Loading from './loading';
 import Footer from './footer';
+import { useUser } from '@auth0/nextjs-auth0/client';
+import mixpanelService from '@/services/mixpanel.service';
 
 export const PageLayout: React.FC<PropsWithChildren> = ({ children }) => {
+  const { user } = useUser();
+
+  useEffect(() => {
+    if (user) {
+      mixpanelService.initializeMixpanel();
+      mixpanelService.identify(user.sub);
+    }
+  }, [user]);
+
   // const { isLoading } = useUser();
 
   // if (isLoading) {

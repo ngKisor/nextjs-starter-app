@@ -48,6 +48,30 @@ $ pnpm run build
 
 ```
 
+## Generate Lighthouse report of the root page in local
+
+```bash
+$ pnpm run lighthouse
+
+```
+
+## Using Docker
+
+### Using docker-compose
+
+Use [docker-compose](https://docs.docker.com/compose/) to quickly bring up a stack with pre-configured settings. Data is ephemeral and containers will disappear when stack is removed.
+
+Bring up stack,
+
+    $ docker-compose up
+
+Navigate to http://localhost:3000/ to verify application is running from docker.
+
+Bring down stack,
+
+    $ docker-compose down
+
+
 ## Contributing
 
 For contribution and feature requests, please create an [issue](https://github.com/ngKisor/nextjs-starter-app/issues) first.

@@ -1,16 +1,4 @@
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
-} from '@/components/ui/navigation-menu';
-
 import Link from 'next/link';
-import { Button } from './ui/button';
 import { useUser } from '@auth0/nextjs-auth0/client';
 
 const NavBar = () => {
@@ -85,45 +73,21 @@ const NavBar = () => {
                 Sign Up
               </Link>
             </li>
-            <li>
-              <Link
-                href="/api/auth/logout"
-                className="block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500"
-              >
-                Logout
-              </Link>
-            </li>
+            {user && (
+              <li>
+                <Link
+                  href="/api/auth/logout"
+                  className="block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500"
+                >
+                  Logout
+                </Link>
+              </li>
+            )}
           </ul>
         </div>
       </div>
     </nav>
   );
-
-  // return (
-  //     <NavigationMenuItem>
-  //         {!user && (
-  //             <>
-  //                 <NavigationMenuItem>
-  //                     <Link href={!user ? "/api/auth/login" : "/api/auth/logout"} passHref>
-  //                         <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-  //                             <Button asChild>
-  //                                 {!user ? "Login" : "Logout"}
-  //                             </Button>
-  //                         </NavigationMenuLink>
-  //                     </Link>
-  //                 </NavigationMenuItem>
-  //             </>
-  //         )}
-  //         {user && (
-  //             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-  //                 <Button asChild>
-  //                     <Link href="/api/auth/logout"></Link>
-  //                 </Button>
-  //             </NavigationMenuLink>
-  //         )}
-
-  //     </NavigationMenuItem>
-  // )
 };
 
 export default NavBar;
